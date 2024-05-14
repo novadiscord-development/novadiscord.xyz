@@ -121,7 +121,6 @@ select {
 [type="reset"],
 [type="submit"],
 button {
-  -webkit-appearance: button;
   background-color: transparent;
   background-image: none;
 }
@@ -144,7 +143,6 @@ progress {
 }
 
 [type="search"] {
-  -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
@@ -231,7 +229,7 @@ img,
 object,
 svg,
 video {
-  display: block;
+  display: inline-block;
   vertical-align: middle;
 }
 
@@ -2916,7 +2914,6 @@ textarea {
   transition-duration: 0.2s;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
   border-radius: inherit;
 }
 
@@ -3549,7 +3546,6 @@ input.inputBox {
 }
 .Toastify__toast-container {
   z-index: var(--toastify-z-index);
-  -webkit-transform: translateZ(var(--toastify-z-index));
   position: fixed;
   padding: 4px;
   width: var(--toastify-toast-width);

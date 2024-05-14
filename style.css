@@ -121,6 +121,8 @@ select {
 [type="reset"],
 [type="submit"],
 button {
+  -webkit-appearance: button;
+  appearance: button;
   background-color: transparent;
   background-image: none;
 }
@@ -143,6 +145,8 @@ progress {
 }
 
 [type="search"] {
+  -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px;
 }
 
@@ -2914,6 +2918,8 @@ textarea {
   transition-duration: 0.2s;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: xor;
   border-radius: inherit;
 }
 
@@ -3546,6 +3552,8 @@ input.inputBox {
 }
 .Toastify__toast-container {
   z-index: var(--toastify-z-index);
+  -webkit-transform: translateZ(var(--toastify-z-index));
+  transform: translateZ(var(--toastify-z-index));
   position: fixed;
   padding: 4px;
   width: var(--toastify-toast-width);

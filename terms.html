@@ -35,27 +35,54 @@
       <div class="h-screen">
         <div class="mx-auto max-w-5xl">
           <header
-            class="sticky top-0 z-40 text-white py-2 md:py-4 md:rounded-full mt-3 bg-zinc-800 card-glass drop-shadow-xl mx-6 lg:mx-0"
-          >
-            <div class="px-4 flex items-center justify-between">
-              <div class="flex flex-row lg:gap-10 md:gap-5">
-                <a class="w-8 h-8 md:w-14 md:h-14" href="/"
-                  ><img
-                    alt="Logo"
-                    srcset="
-                      /_next/image?url=%2Flogo.png&amp;w=64&amp;q=75  1x,
-                      /_next/image?url=%2Flogo.png&amp;w=128&amp;q=75 2x
-                    "
-                    src="/_next/image?url=%2Flogo.png&amp;w=128&amp;q=75"
-                    width="56"
-                    height="56"
-                    decoding="async"
-                    data-nimg="1"
-                    class="w-full h-full"
-                    loading="lazy"
-                    style="color: transparent"
-                /></a>
-                <div class="hidden md:flex lg:gap-10 md:gap-5">
+          class="sticky top-0 z-40 text-white py-2 md:py-4 md:rounded-full mt-3 bg-zinc-800 card-glass drop-shadow-xl mx-6 lg:mx-0"
+        >
+          <div class="px-4 flex items-center justify-between">
+            <div class="flex flex-row lg:gap-10 md:gap-5">
+              <a class="w-8 h-8 md:w-14 md:h-14" href="/"
+                ><img
+                  alt="Logo"
+                  srcset="images/WebsiteIcon.png"
+                  src="images/WebsiteIcon.png"</a>
+              <div class="hidden md:flex lg:gap-10 md:gap-5">
+                <a
+                  class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
+                  href="/"
+                  >Home</a
+                ><a
+                  class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
+                  href="/guides"
+                  >Guides</a
+                ><a
+                  href="https://discord.gg/FBj5tDDhaT"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
+                  >Support</a
+                >
+              </div>
+            </div>
+            <nav class="hidden md:flex gap-x-2"></nav>
+            <button
+              class="flex items-center space-x-2 focus:outline-none md:hidden"
+            >
+              <div class="w-6 flex items-center justify-center relative">
+                <span
+                  class="transform transition w-6 h-1 bg-white rounded-md absolute -translate-y-2"
+                ></span
+                ><span
+                  class="transform transition w-6 h-1 bg-white rounded-md absolute opacity-100"
+                ></span
+                ><span
+                  class="transform transition w-6 h-1 bg-white rounded-md absolute translate-y-2"
+                ></span>
+              </div>
+            </button>
+            <nav
+              class="mt-2 card-glass w-full p-4 absolute top-12 left-0 hidden"
+            >
+              <div class="flex flex-col w-full">
+                <div class="flex flex-col w-full items-center">
                   <a
                     class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
                     href="/"
@@ -65,56 +92,18 @@
                     href="/guides"
                     >Guides</a
                   ><a
-                    href="https://discord.gg/bfWjp3mjFv"
+                    href="https://discord.gg/bumps"
                     target="_blank"
                     rel="noreferrer"
                     class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
                     >Support</a
                   >
                 </div>
+                <div class="flex flex-row justify-center gap-1 w-full"></div>
               </div>
-              <nav class="hidden md:flex gap-x-2"></nav>
-              <button
-                class="flex items-center space-x-2 focus:outline-none md:hidden"
-              >
-                <div class="w-6 flex items-center justify-center relative">
-                  <span
-                    class="transform transition w-6 h-1 bg-white rounded-md absolute -translate-y-2"
-                  ></span
-                  ><span
-                    class="transform transition w-6 h-1 bg-white rounded-md absolute opacity-100"
-                  ></span
-                  ><span
-                    class="transform transition w-6 h-1 bg-white rounded-md absolute translate-y-2"
-                  ></span>
-                </div>
-              </button>
-              <nav
-                class="mt-2 card-glass w-full p-4 absolute top-12 left-0 hidden"
-              >
-                <div class="flex flex-col w-full">
-                  <div class="flex flex-col w-full items-center">
-                    <a
-                      class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
-                      href="/"
-                      >Home</a
-                    ><a
-                      class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
-                      href="/guides"
-                      >Guides</a
-                    ><a
-                      href="https://discord.gg/bfWjp3mjFv"
-                      target="_blank"
-                      rel="noreferrer"
-                      class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
-                      >Support</a
-                    >
-                  </div>
-                  <div class="flex flex-row justify-center gap-1 w-full"></div>
-                </div>
-              </nav>
-            </div>
-          </header>
+            </nav>
+          </div>
+        </header>
           <div class="flex justify-center gap-5 pt-1">
             <div class="flex flex-col">
               <h1

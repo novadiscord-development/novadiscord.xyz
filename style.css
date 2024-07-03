@@ -245,7 +245,7 @@ nav {
     border-radius: 5px; /* roundness of the track */
 }
 
-/* Optional: styling for hover state */
+/* Optional: styling for hover state *
 ::-webkit-scrollbar-thumb:hover {
     background-color: #2c548c; /* color of the scrollbar thumb on hover, set to #3c84ef */
 }

@@ -1,292 +1,496 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    />
-  
-    <title>Nova | #1 Discord Bot</title>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-52HYQ9JGJE"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6741832088525144"
+     crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-52HYQ9JGJE');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReviewsBot - Reviews Done Easy</title>
+    <link rel="icon" type="image/png" href="/assets/img/ReviewsBot.png">
+    <meta property="og:title" content="ReviewsBot - Reviews Done Easy">
+    <meta name="og:description" content="An application designed to let users provide reviews on servers, bots, services, and much more!">
+    <meta property="og:image" content="/assets/img/ReviewsBot.png">
+    <meta property="og:url" content="/">
+    <meta name="theme-color" content="#408CFC">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
+        ntegrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <link rel='stylesheet' href="/assets/css/style.css">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            twemoji.parse(document.body,
+                { folder: 'svg', ext: '.svg' }
+            );
+        }
+    </script>
     <style>
-      body,
-      html {
-        background-color: #18181b !important;
-        background-attachment: fixed !important;
-        background-image: radial-gradient(
-            at 1% 1%,
-            hsl(225.74deg 77% 40%) 0,
-            transparent 59%
-          ),
-          radial-gradient(at 82% 65%, hsl(217.94, 75%, 18%) 0, transparent 55%) !important;
-      }
+        img.emoji {
+            width: 1em;
+            pointer-events: none;
+            display: inline-block;
+        }
     </style>
-    <link rel="stylesheet"href="style.css" data-n-g>
-    <noscript data-n-css></noscript>
-      <div>
-        <div class="mx-auto max-w-5xl">
-          <header
-            class="sticky top-0 z-40 text-white py-2 md:py-4 md:rounded-full mt-3 bg-zinc-800 card-glass drop-shadow-xl mx-6 lg:mx-0"
-          >
-            <div class="px-4 flex items-center justify-between">
-              <div class="flex flex-row lg:gap-10 md:gap-5">
-                <a class="w-8 h-8 md:w-14 md:h-14" href="/"
-                  ><img
-                    alt="Logo"
-                    srcset="images/WebsiteIcon.png"
-                    src="images/WebsiteIcon.png"</a>
-                <div class="hidden md:flex lg:gap-10 md:gap-5">
-                  <a
-                    class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
-                    href="/"
-                    >Home</a
-                  ><a
-                    class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
-                    href="/guides"
-                    >Guides</a
-                  ><a
-                    href="https://discord.gg/FBj5tDDhaT"
-                    target="_blank"
-                    rel="noreferrer"
-                    class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
-                    >Support</a
-                  >
-                </div>
-              </div>
-              <nav class="hidden md:flex gap-x-2"></nav>
-              <button
-                class="flex items-center space-x-2 focus:outline-none md:hidden"
-              >
-                <div class="w-6 flex items-center justify-center relative">
-                  <span
-                    class="transform transition w-6 h-1 bg-white rounded-md absolute -translate-y-2"
-                  ></span
-                  ><span
-                    class="transform transition w-6 h-1 bg-white rounded-md absolute opacity-100"
-                  ></span
-                  ><span
-                    class="transform transition w-6 h-1 bg-white rounded-md absolute translate-y-2"
-                  ></span>
-                </div>
-              </button>
-              <nav
-                class="mt-2 card-glass w-full p-4 absolute top-12 left-0 hidden"
-              >
-                <div class="flex flex-col w-full">
-                  <div class="flex flex-col w-full items-center">
-                    <a
-                      class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
-                      href="/"
-                      >Home</a
-                    ><a
-                      class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
-                      href="/guides"
-                      >Guides</a
-                    ><a
-                      href="https://discord.gg/bumps"
-                      target="_blank"
-                      rel="noreferrer"
-                      class="my-auto font-semibold text-base hover:text-slate-300 transition-all"
-                      >Support</a
-                    >
-                  </div>
-                  <div class="flex flex-row justify-center gap-1 w-full"></div>
-                </div>
-              </nav>
+</head>
+
+<body class="container max-w-10xl mx-auto">
+
+    <nav class="sticky w-full z-20 top-0 left-0">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="/" class="flex items-center">
+                <img src="/assets/img/ReviewsBot.png" draggable="false" class="h-7 mr-3" alt="IMG">
+                <span class="regularTextBold text-white self-center whitespace-nowrap">ReviewsBot</span>
+            </a>
+            <div class="flex md:order-2">
+                <a href="/invite" target="_blank"><button type="button"
+                        class="normalTextBold text-black gradientBg rounded-full px-6 py-3 text-center mr-3 md:mr-0"><i class="fa-brands fa-discord mr-2"></i>Add To Discord</button></a>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 text-white rounded-xl md:hidden coloredBg aria-controls="
+                    navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
             </div>
-          </header>
-          <div class="px-4 flex flex-col my-20 gap-y-40">
-            <div
-              class="flex flex-col md:flex-row text-white text-center md:text-left mx-auto w-full items-center"
-            >
-              <div
-                class="flex flex-col gap-y-8 mt-8 md:mt-0 order-2 md:order-1"
-              >
-                <h1 class="font-black text-3xl md:text-7xl md:max-w-xl">
-                  Nova
-                </h1>
-                <h2 class="font-semibold text-lg md:text-2xl">
-                  <span class="text-highlight-txt">#1</span> Discord Multi-Purpose Bot!
-                  <p
-                    class="font-semibold text-sm md:mr-60 md:text-base leading-8"
-                  >🌍 The Discord bot to make server management and moderation easy. Create giveaways, manage server queries with tickets and much more!
-                  </p>
-                </h2>
-                <a
-                  href="https://discord.com/oauth2/authorize?client_id=1232321039305015326"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="font-semibold text-sm md:text-xl"
-                  ><button
-                    class="rounded-full animate-gradient__activeXs animate-gradient__rotate py-3.5 px-10 bg-cta-button animate-shake hover:drop-shadow-xl hover:bg-opacity-25 transition-all bg-opacity-10 overflow-hidden"
-                  >
-                    Invite to Server<i></i></button
-                ></a>
-              </div>
-              <img
-                alt="Nova Logo"
-                srcset="images/WebsiteIcon.png"
-                src="images/WebsiteIcon.png"
-                width="283"
-                height="283"
-                decoding="async"
-                data-nimg="1"
-                class="order-1 md:order-2 md:ml-auto drop-shadow-xl&quot;"
-                style="color: transparent"
-              />
-            </div>
-            <div
-              class="scroller mx-auto outline outline-white p-4 w-full overflow-hidden my-0"
-            >
-              <div class="scroll" style="--time: 0s">
-                <div></div>
-                <div></div>
-              </div>
-              <div class="scroll-reverse" style="--time: 0s">
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div
-              class="flex flex-col md:flex-row text-white text-center md:text-left mx-auto w-full items-center"
-            >
-              <div class="flex flex-col gap-y-8 mb-8 md:order-2 md:ml-auto">
-                <h2 class="font-black text-2xl md:text-4xl">
-                  Fully <span class="text-highlight-txt">Customisable</span>
-                </h2>
-                <p
-                  class="text-sm md:text-xl font-semibold leading-8 md:max-w-md"
-                >Stay in control, all of Nova's Commands are customizable to your taste, customize your verification messages - change all the log channels for moderating the naughty members in your server. Do it all with Nova!</p>
-              </div>
-              <div class="hover:scale-110 transition-all undefined">
-                <div>
-                  <img
-                    alt="OneBump Embed Example"
-                    srcset="images/customize.png"
-                    src="images/customize.png"
-                    width="300"
-                    height="300"
-                    border-radius="15px"
-                    decoding="async"
-                    data-nimg="1"
-                    class="md:order-1 drop-shadow-xl transition-all"
-                    style="color: transparent"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex flex-col md:flex-row text-white text-center md:text-left mx-auto w-full items-center"
-            >
-              <div class="flex flex-col gap-y-8 mb-8">
-                <h2 class="font-black text-2xl md:text-4xl">
-                  24/7 <span class="text-highlight-txt">Support</span>
-                </h2>
-                <p
-                  class="text-sm md:text-xl font-semibold leading-8 md:max-w-md"
-                >Need help with Nova? Our support team will be there for you! Just join the support server and create a support request.</p>
-              </div>
-              <div class="hover:scale-110 transition-all md:ml-auto">
-                <div>
-                  <img
-                    alt="Statistics Example"
-                    srcset="images/support.png"
-                    src="images/support.png"
-                    width="300"
-                    height="300"
-                    decoding="async"
-                    data-nimg="1"
-                    class="md:ml-auto drop-shadow-xl transition-all"
-                    style="color: transparent"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex flex-col md:flex-row text-white text-center md:text-left mx-auto w-full items-center"
-            >
-              <div class="flex flex-col gap-y-8 mb-8 md:order-2 md:ml-auto">
-                <h2 class="font-black text-2xl md:text-4xl">
-                  Value Packed <span class="text-highlight-txt">Premium</span>
-                </h2>
-                <p
-                  class="text-sm md:text-xl font-semibold leading-8 md:max-w-md"
-                >Our Premium Packages offer access to 100% of our discord bot functionality, giveaways, server suggestions and more moderation powers! If you want to support Nova, this is the plan for you!</p>
-              </div>
-              <div class="hover:scale-110 transition-all undefined">
-                <div>
-                  <img
-                    alt="Premium Example"
-                    srcset="images/premium3.png"
-                    src="images/premium3.png"
-                    width="300"
-                    height="300"
-                    decoding="async"
-                    data-nimg="1"
-                    class="md:order-1 drop-shadow-xl transition-all"
-                    style="color: transparent"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="text-white text-center flex flex-col gap-y-6">
-              <div class="font-bold text-2xl md:text-4xl">
-                Want Nova? Invite the bot here.
-              </div>
-              <a
-                href="https://discord.com/oauth2/authorize?client_id=1232321039305015326"
-                target="_blank"
-                rel="noreferrer"
-                class="font-semibold text-sm md:text-xl"
-                ><button
-                  class="rounded-full animate-gradient__activeXs animate-gradient__rotate py-3.5 px-10 bg-cta-button animate-shake hover:drop-shadow-xl hover:bg-opacity-25 transition-all bg-opacity-10 overflow-hidden"
-                >
-                  Invite to Server<i></i></button
-              ></a>
-            </div>
-          </div>
-        </div>
-        <footer
-          class="bg-zinc-900 bg-opacity-50 backdrop-blur-lg text-white py-6 mt-8"
-        >
-          <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-6">
-              <div class="flex justify-center">
-                <a href="/"
-                  ><img
-                    alt="Logo"
-                    srcset="
-                      /_next/image?url=%2Flogo.png&amp;w=64&amp;q=75  1x,
-                      /_next/image?url=%2Flogo.png&amp;w=128&amp;q=75 2x
-                    "
-                    src="/_next/image?url=%2Flogo.png&amp;w=128&amp;q=75"
-                    width="56"
-                    height="56"
-                    decoding="async"
-                    data-nimg="1"
-                    loading="lazy"
-                    style="color: transparent"
-                /></a>
-              </div>
-              <div class="flex flex-col items-center">
-                <h3 class="text-lg font-semibold mb-2">Nova</h3>
-                <ul>
-                  <li class="mb-1 text-center">
-                    <a
-                      href="https://discord.com/oauth2/authorize?client_id=1232321039305015326"
-                      ><button class="text-sm">Bot Invite</button></a
-                    >
-                  </li>
-                  <li class="mb-1 text-center">
-                    <a href="https://discord.gg/Pk77BVeydq"
-                      ><button class="text-sm">Support Server</button></a
-                    >
-                  </li>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="text-white flex flex-col p-4 md:p-0 mt-4 border border-gray-800 rounded-xl md:flex-row md:space-x-8 md:mt-0 md:border-0">
+                    <!--
+                    <li>
+                        <a href="#top"
+                            class="normalText text-white whiteUnderline block py-2 pl-3 pr-6 rounded md:hover:bg-transparent md:p-0"><i class="fa-regular fa-house-blank"></i></a>
+                    </li>
+                -->
+                    <li>
+                        <a href="#features"
+                            class="normalText text-white whiteUnderline block py-2 pl-3 pr-6 rounded md:hover:bg-transparent md:p-0">Features</a>
+                    </li>
+                    <li>
+                        <a href="#reviews"
+                            class="normalText text-white whiteUnderline block py-2 pl-3 rounded md:hover:bg-transparent md:p-0">Reviews</a>
+                    </li>
+                    <li>
+                        <a href="/support" target="_blank" class="normalText text-white whiteUnderline block py-2 pl-3 rounded md:hover:bg-transparent md:p-0">Support</a>
+                    </li>
+                    <li>
+                        <a href="/premium" class="normalText text-white whiteUnderline flex items-center justify-end py-2 pr-3 rounded md:hover:bg-transparent md:p-0">
+                            Premium <i class="fas fa-crown ml-2 text-yellow-400"></i>
+                        </a>
+                    </li>
                 </ul>
-              </div>
             </div>
-          </div>
-        </footer>
-      </div>
-      <div class="Toastify"></div>
-    </div>
-  </body>
+        </div>
+    </nav>
+
+
+    <section class="section">
+        <div class="py-8 px-4 mx-auto max-w-6xl text-center lg:py-16 mt-8">
+            <h1 class="blackText text-white mb-4 tracking-tight leading-none">Making Feedback Gathering Easier
+                <span class="gradientColor"><br>#1</span> Feedback Bot on Discord
+            </h1>
+            <p class="regularText text-white opacity-90 mt-8 mb-8 sm:px-16 lg:px-48">An application designed to let users provide reviews on servers, bots, services, and much more!</p>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="/invite" target="_blank"
+                    class="normalTextBold text-black gradientBg inline-flex justify-center items-center py-3 px-6 text-center rounded-full">
+                    Add To Discord
+                    <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="/support"
+                    class="normalTextBold text-white secBg opacity-60 hover:opacity-100 inline-flex justify-center items-center py-3 px-6 text-center rounded-full">
+                    Support Server
+                </a>
+            </div>
+            <p class="smallText text-white opacity-90 mt-8 mb-8 sm:px-16 lg:px-48"><span class="mr-2"><i
+                        class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60">Fully Configurable</span></span> <span class="mr-2"><i
+                        class="fa-regular fa-check mr-1 opacity-90"></i>
+                    <span class="opacity-60">Reliable Uptime</span></span></p>
+        <!--    <img class="mt-8" src="/assets/img/TYPE1.png" draggable="false" alt="IMG"> -->
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="py-8 px-4 mx-auto max-w-6xl text-center lg:py-16">
+            <hr class="customHr">
+            <br>
+            <p class="boldText text-white opacity-90 mt-8 mb-2 sm:px-16 lg:px-48">Custom-designed <span
+                    class="gradientColor"><b>
+                        to enhance</b></span> your Discord server's experience.</p>
+            <p class="regularTextIta text-white opacity-60 mb-8 sm:px-16 lg:px-48">Trusted by over 3,600 communities.</p>
+            <br>
+            <hr class="customHr"> 
+        </div>
+    </section>
+<!--
+    <section class="section">
+        <div class="py-8 px-4 mx-auto max-w-6xl lg:py-16">
+            <p class="extraBoldText text-white opacity-90 mt-8 mb-2 sm:px-16 lg:px-48"><span
+                    class="gradientColor"><b>Kurulumu</b></span> son derece basit</p>
+            <p class="smallText text-white opacity-80 mb-8 sm:px-16 lg:px-48"></p>
+            <br>
+            <div class="sm:px-16 lg:px-48">
+                <div class="grid grid-cols-1 gap-8 sm:gird-cols-1 md:grid-cols-3">
+                    <div class="card h-full">
+                        <div class="items-center overflow-hidden">
+                            <p class="smallText text-white opacity-80 mt-5">Adım 1</p>
+                            <p class="boldText text-white opacity-90 mt-3"><span class="gradientColor"><b>Sunucuna
+                                        ekle</b></span></p>
+                            <p class="smallText text-white opacity-80 mt-3">Nors'u sunucuna ekle.</p>
+                        </div>
+                    </div>
+                    <div class="card h-full">
+                        <div class="items-center overflow-hidden">
+                            <p class="smallText text-white opacity-80 mt-5">Adım 2</p>
+                            <p class="boldText text-white opacity-90 mt-3"><span class="gradientColor"><b>Komutu
+                                        kullan</b></span></p>
+                            <p class="smallText text-white opacity-80 mt-3">/:CMDNAME komutunu kullanarak kayıt
+                                sistemini
+                                hazır hale getir.</p>
+                        </div>
+                    </div>
+                    <div class="card h-full">
+                        <div class="items-center overflow-hidden">
+                            <p class="smallText text-white opacity-80 mt-5">Adım 3</p>
+                            <p class="boldText text-white opacity-90 mt-3"><span class="gradientColor"><b>Her şey
+                                        hazır!</b></span></p>
+                            <p class="smallText text-white opacity-80 mt-3">İşte hazırsın! artık kayıt sistemine
+                                sahipsin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 mt-8">
+                <a href="/invite" target="_blank"
+                    class="normalTextBold text-black gradientBg inline-flex justify-center items-center py-3 px-6 text-center rounded-full">
+                    Sunucuna ekle
+                    <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="smallText text-white text-center opacity-90 mt-8 mb-8 sm:px-16 lg:px-48"><span class="mr-2"><i
+                        class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60">Tamamiyle
+                        ayarlanabilir</span></span> <span class="mr-2"><i
+                        class="fa-regular fa-check mr-1 opacity-90"></i>
+                    <span class="opacity-60">Tamamen ücretsiz</span></span></p>
+        </div>
+    </section>
+-->
+    <section class="section" id="features">
+        <div class="py-8 px-4 mx-auto max-w-6xl lg:py-16">
+            <!-- <hr class="customHr">  -->
+            <br>
+            <br>
+            <div class="sectionGrid mt-8 mb-8">
+                <div class="sectionGridItem">
+                    <img src="/assets/img/user-reviews.png" draggable="false" alt="IMG" width="500">
+                </div>
+                <div class="sectionGridItem sectionGridItemRight">
+                    <p class="extraBoldText text-white opacity-90">User-Driven Reviews</p>
+                    <p class="smallText text-white opacity-80 mt-4">ReviewsBot allows your server members to share their honest feedback on servers, bots, and services, fostering a culture of trust and transparency within your Discord community.</p>
+                    <a href="/invite" target="_blank">
+                        <p class="smallTextBold gradientColor gradientUnderline mt-3">Invite ReviewsBot <i
+                                class="fa-regular fa-arrow-right"></i></p>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="sectionGrid mt-8 mb-8">
+                <div class="sectionGridItem">
+                    <p class="extraBoldText text-white opacity-90">Customizable Presentation</p>
+                    <p class="smallText text-white opacity-80 mt-4">Personalize your review space with customizable embed colors, dedicated review channels, and unique review embed titles, making each review align perfectly with your server's aesthetic and vibe.</p>
+                    <a href="/invite" target="_blank">
+                        <p class="smallTextBold gradientColor gradientUnderline mt-3">Invite ReviewsBot <i
+                                class="fa-regular fa-arrow-right"></i></p>
+                    </a>
+                </div>
+                <div class="sectionGridItem sectionGridItemRight">
+                    <img src="/assets/img/Custom-reviews.png" draggable="false" alt="IMG" width="500">
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="sectionGrid mt-8 mb-8">
+                <div class="sectionGridItem">
+                    <img src="/assets/img/restored-reviews.png" draggable="false" alt="IMG" width="500">
+                </div>
+                <div class="sectionGridItem sectionGridItemRight">
+                    <p class="extraBoldText text-white opacity-90">Review Restoring</p>
+                    <p class="smallText text-white opacity-80 mt-4">ReviewsBot's Review Restoring feature enables server owners to quickly recover deleted reviews, ensuring that valuable insights and feedback are never lost, even in the event of server disruptions or channel deletions. This functionality is crucial for maintaining the integrity of your server's review history and supporting continuous improvement.</p>
+                    <a href="/invite" target="_blank">
+                        <p class="smallTextBold gradientColor gradientUnderline mt-3">Invite ReviewsBot <i
+                                class="fa-regular fa-arrow-right"></i></p>
+                    </a>
+
+                </div>
+            </div>
+<!--
+            <br>
+            <br>
+            <div class="sectionGrid mt-8 mb-8">
+                <div class="sectionGridItem">
+                    <p class="extraBoldText text-white opacity-90">Üyeleri Karşıla</p>
+                    <p class="smallText text-white opacity-80 mt-4">Sunucuya üye katıldığında otomatik
+                        etiketler ve
+                        mesaj atarak sunucuya giriş yaptığını haberdar eder.</p>
+                    <a href="/invite" target="_blank">
+                        <p class="smallTextBold gradientColor gradientUnderline mt-3">Sunucuna ekle <i
+                                class="fa-regular fa-arrow-right"></i></p>
+                    </a>
+
+                </div>
+                <div class="sectionGridItem sectionGridItemRight">
+                    <img src="/assets/img/TYPE2.png" draggable="false" alt="IMG" width="500">
+                </div>
+            </div>
+        -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr class="customHr">
+        </div>
+    </section>
+                </div>
+            </div>
+            <br>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 mt-8">
+                <a href="/invite" target="_blank"
+                    class="normalTextBold text-black gradientBg inline-flex justify-center items-center py-3 px-6 text-center rounded-full">
+                    Add ReviewsBot
+                    <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="smallText text-white opacity-90 mt-8 mb-8 sm:px-16 lg:px-48"><span class="mr-2"><i
+                        class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60">Secure & Reliable</span></span> <span class="mr-2"><i
+                        class="fa-regular fa-check mr-1 opacity-90"></i>
+                    <span class="opacity-60">Regular Updates</span></span></p>
+        </div>
+    </section>
+<!--
+    <section class="section" id="features">
+        <div class="py-8 px-4 mx-auto max-w-6xl lg:py-16">
+            <hr class="customHr">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p class="extraBoldText text-white opacity-90 mt-8 mb-2 sm:px-16 lg:px-48"><span
+                    class="gradientColor"><b>Geliştirici</b></span> Ekibi
+            </p>
+            <br>
+            <div class="sm:px-16 lg:px-48 text-left">
+                <div class="grid grid-cols-1 gap-8 sm:gird-cols-1 md:grid-cols-3">
+                    <div class="cardWBg rounded-xl h-full">
+                        <div class="p-6 items-center overflow-hidden mt-5 mb-5">
+                            <center><img src="/assets/img/Nors.png" draggable="false" alt="IMG" style="width: 100%">
+                            </center>
+                            <p class="boldText text-white opacity-90 mt-5"><b>SinecKers</b></p>
+                            <p class="smallText text-white opacity-80 mt-3">Bot Sahibi & Geliştirici</p>
+                            <p class="smallText gradientColor mt-3"><a href="https://github.com/sineckers"
+                                    target="_blank" class="gradientUnderline">GitHub <i
+                                        class="fa-regular fa-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="cardWBg rounded-xl h-full">
+                        <div class="p-6 items-center overflow-hidden mt-5 mb-5">
+                            <center><img src="/assets/img/Nors.png" draggable="false" alt="IMG" style="width: 100%">
+                            </center>
+                            <p class="boldText text-white opacity-90 mt-5"><b>emrenow</b></p>
+                            <p class="smallText text-white opacity-80 mt-3">Bot Sahibi & Geliştirici</p>
+                            <p class="smallText gradientColor mt-3"><a href="https://github.com/emrenow" target="_blank"
+                                    class="gradientUnderline">GitHub <i class="fa-regular fa-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="cardWBg rounded-xl h-full">
+                        <div class="p-6 items-center overflow-hidden mt-5 mb-5">
+                            <center><img src="/assets/img/Nors.png" draggable="false" alt="IMG" style="width: 100%">
+                            </center>
+                            <p class="boldText text-white opacity-90 mt-5"><b>Eleven</b></p>
+                            <p class="smallText text-white opacity-80 mt-3">Website Tasarımcısı</p>
+                            <p class="smallText gradientColor mt-3"><a href="https://github.com/elevenvac"
+                                    target="_blank" class="gradientUnderline">GitHub <i
+                                        class="fa-regular fa-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+    </section>
+-->
+    <section class="section">
+        <div class="py-8 px-4 mx-auto max-w-6xl text-center lg:py-16">
+            <hr class="customHr">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="gradientBg rounded-xl">
+                <div class="p-3">
+                    <p class="extraBoldText text-black opacity-90 mt-8 mb-2 sm:px-16 lg:px-48">Add ReviewsBot to Your Server Today!</p>
+                    <p class="regularTextIta text-black opacity-80 mb-8 sm:px-16 lg:px-48">Discord's #1 feedback bot, ReviewsBot – Elevate your server with unrivaled feedback management!
+                    </p>
+                    <div
+                        class="flex flex-col justify-center items-center space-y-4 sm:flex-row sm:justify-left sm:space-y-0 sm:space-x-4">
+                        <a href="/invite" target="_blank"
+                            class="normalTextBold text-white blackBg inline-flex justify-center items-center py-3 px-6 text-center rounded-full">
+                            Invite ReviewsBot
+                            <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="smallText text-black opacity-90 mt-8 mb-8 sm:px-16 lg:px-48"><span class="mr-2"><i
+                                class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60">Fully Configurable</span></span> <span class="mr-2"><i
+                                class="fa-regular fa-check mr-1 opacity-90"></i>
+                            <span class="opacity-60">Reliable Uptime</span></span></p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+    </section>
+
+    <footer class="mb-8">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <hr class="customHr">
+            <br>
+            <br>
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="/" class="flex items-center">
+                        <img src="/assets/img/ReviewsBot.png" draggable="false" class="h-7 mr-3" alt="IMG">
+                        <span class="regularTextBold text-white self-center whitespace-nowrap">ReviewsBot</span>
+                    </a>
+                    <br>
+                    <p class="smallText text-white opacity-80 mb-1">An application designed to let users provide reviews on servers, bots, services, and much more!
+                        <br>
+                        <br>
+                        Proudly Sponsored By <span
+                        class="gradientColor"><b> <a href="https://billing.pebblehost.com/aff.php?aff=3552" class="text-white">PebbleHost </b></span></a>
+                    </p>
+                    <p class="smallText text-white opacity-80 mb-3"><br>&copy ReviewsBot 2022 - 2024<br>All rights reserved.</p>
+                    </div>
+                    
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="regularTextIta mb-6 text-white">Useful Links</h2>
+                        <ul class="smallText text-white opacity-80">
+                            <li class="mb-4">
+                                <a href="/invite" target="_blank" class="gradientUnderline">Invite ReviewsBot</a>
+                            </li>
+                            <li>
+                                <a href="/support" target="_blank" class="gradientUnderline">Support Server</a>
+                            </li>
+                           <br>
+                            <li>
+                                <a href="https://bump4you.com/" target="_blank" class="gradientUnderline">Bump4You</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href="/pebblehost" class="gradientUnderline">PebbleHost</a>
+                            </li>
+                           <br>
+                            <li>
+                                <a href="https://discord.gg/xpxwzegj9f" target="_blank" class="gradientUnderline">Anima Flux</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="regularTextIta mb-6 text-white">Legal</h2>
+                        <ul class="smallText text-white opacity-80">
+                            <li class="mb-4">
+                                <a href="/terms" class="gradientUnderline">Terms of Usage</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="/privacy" class="gradientUnderline">Privacy Policy</a>
+                            </li>
+                           <!-- <li>
+                                <a href="/vote/botsgg" target="_blank" class="gradientUnderline">Bots.gg</a>
+                            </li>
+                        -->
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="regularTextIta mb-6 text-white">Support Us</h2>
+                        <ul class="smallText text-white opacity-80">
+                            <li class="mb-4">
+                                <a href="/topgg" target="_blank" class="gradientUnderline">Vote on Top.gg</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="/wumpus" target="_blank" class="gradientUnderline">Vote on wumpus.store</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="/kofi" target="_blank" class="gradientUnderline">Donate on Ko-fi.com</a>
+                            </li>
+                          <!-- <li>
+                                <a href="mailto:support@norsbot.xyz" class="gradientUnderline">support@norsbot.xyz</a>
+                            </li>
+                        -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <br>
+    <br>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+
 </html>
